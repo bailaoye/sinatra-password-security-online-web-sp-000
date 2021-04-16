@@ -33,8 +33,8 @@ class ApplicationController < Sinatra::Base
 	post "/login" do
 		#your code here!
 		puts params
-		user = User.find_by(username: params[:username])
-		if user && user.authenticate
+		@user = User.find_by(username: params[:username])
+		if @user && user.authenticate
 		end
 	end
 
