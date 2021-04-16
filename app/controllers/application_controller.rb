@@ -19,6 +19,7 @@ class ApplicationController < Sinatra::Base
 	post "/signup" do
 		#your code here!
 		user = User.new(params)
+		if user.save?
 	end
 
 	get "/login" do
