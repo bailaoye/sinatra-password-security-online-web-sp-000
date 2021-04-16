@@ -37,6 +37,7 @@ class ApplicationController < Sinatra::Base
 		if @user && @user.authenticate
 			erb :success
 		else
+			redirect '/failure'
 		end
 	end
 
