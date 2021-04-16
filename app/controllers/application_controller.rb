@@ -35,6 +35,7 @@ class ApplicationController < Sinatra::Base
 		puts params
 		@user = User.find_by(username: params[:username])
 		if @user && @user.authenticate
+			erb :success
 		end
 	end
 
