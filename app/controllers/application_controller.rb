@@ -19,7 +19,6 @@ class ApplicationController < Sinatra::Base
 	post "/signup" do
 		#your code here!
 		@user = User.create(params)
-		puts params
 	end
 
 	get "/login" do
