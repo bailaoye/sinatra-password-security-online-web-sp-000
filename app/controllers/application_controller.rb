@@ -34,7 +34,8 @@ class ApplicationController < Sinatra::Base
 		#your code here!
 		puts params
 		user = User.find_by(username: params[:username])
-		if user 
+		if user && user.authenticate
+		end
 	end
 
 	get "/success" do
